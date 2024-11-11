@@ -123,9 +123,9 @@ main() {
     # Statusline base command configuration: No need to touch anything here
     # Placement is handled below
     # Shows truncated current working directory
-    local window_separator 
+    local window_separator
     window_separator="$(get_tmux_option "@rose_pine_window_separator" "")"
-    readonly window_separator 
+    readonly window_separator
 
     # Allows user to set a few custom sections (for integration with other plugins)
     # Before the plugin's left section
@@ -163,12 +163,18 @@ main() {
 
     # Changes the icon / character that goes between each window's name in the bar
     local window_status_separator
-    window_status_separator="$(get_tmux_option "@rose_pine_window_status_separator" " ")"
+    window_status_separator="$(get_tmux_option "@rose_pine_window_status_separator" "")"
+
+    local right_separator
+    right_separator="$(get_tmux_option "@rose_pine_right_separator" "")"
+
+    local left_separator
+    left_separator="$(get_tmux_option "@rose_pine_left_separator" "")"
 
     local field_separator
     # NOTE: Don't remove
     field_separator="$(get_tmux_option "@rose_pine_field_separator" " | " )"
-     
+
     # "│"
     # END
 
@@ -185,10 +191,11 @@ main() {
     show_window_in_window_status_current="#I#[fg=$thm_gold,bg=""]$left_separator#[fg=$thm_gold,bg=""]#W"
 
     local show_session
-    readonly show_session=" #[fg=#{?client_prefix,$thm_love,$thm_text}]$current_session_icon #[fg=#{?client_prefix,$thm_love,$thm_text}]#S$spacer"
+    readonly show_session="#[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_surface] $current_session_icon #[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_surface]#S$spacer#[fg=$thm_surface, bg=default] "
 
+    # section_separators = { left = '', right = '' },
     local show_directory
-    readonly show_directory="$spacer#[fg=$thm_subtle]$current_folder_icon #[fg=$thm_foam]#{b:pane_current_path} "
+    readonly show_directory="#[fg=$thm_overlay, bg=default]#[fg=$thm_subtle, bg=$thm_overlay]$spacer$current_folder_icon #[fg=$thm_foam]#{b:pane_current_path} "
 
     local show_directory_in_window_status
     # BUG: It doesn't let the user pass through a custom window name
@@ -203,13 +210,13 @@ main() {
     # TEST: This needs to be tested further
     # TODO: cleanup this thing.
     set status-style "fg=$thm_pine,bg=default"
-    show_window_in_window_status="#[fg=$thm_rose,bg=default] #I#[fg=$thm_rose,bg=default]:#[fg=$thm_rose,bg=default]#W"
-    show_window_in_window_status_current="#[fg=$thm_pine,bg=default] #I#[fg=$thm_pine,bg=default]:#[fg=$thm_pine,bg=default]#W*"
-    show_directory_in_window_status="#[fg=$thm_rose,bg=default]#I#[fg=$thm_rose,bg=default]$left_separator#[fg=$thm_rose,bg=default]#{b:pane_current_path}"
+    show_window_in_window_status="#[fg=$thm_subtle,bg=default]- #I#[fg=$thm_subtle,bg=default]:#[fg=$thm_subtle,bg=default]#W"
+    show_window_in_window_status_current="#[fg=$thm_pine,bg=default, bold] #I#[fg=$thm_pine,bg=default]:#[fg=$thm_pine,bg=default]#W"
+    show_directory_in_window_status="#[fg=$thm_subtle,bg=default]#I#[fg=$thm_subtle,bg=default]$left_separator#[fg=$thm_subtle,bg=default]#{b:pane_current_path}"
     show_directory_in_window_status_current="#[fg=$thm_pine,bg=default]#I#[fg=$thm_pine,bg=default]:#[fg=$thm_pine,bg=default]#{b:pane_current_path}"
-    set window-status-style "fg=$thm_rose,bg=default"
+    set window-status-style "fg=$thm_subtle,bg=default"
     set window-status-current-style "fg=$thm_pine,bg=default"
-    set window-status-activity-style "fg=$thm_rose,bg=default"
+    set window-status-activity-style "fg=$thm_subtle,bg=default"
     set message-style "fg=$thm_gold,bg=default"
 
 
@@ -228,7 +235,7 @@ main() {
     local current_window_count
 
     current_window_count=$(tmux list-windows | wc -l)
-    
+
     # NOTE: Dont remove this, it can be useful for references
     # setw window-status-format "$window_status_format"
     # setw window-status-current-format "$window_status_current_format"
