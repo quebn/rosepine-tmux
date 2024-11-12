@@ -2,10 +2,12 @@
 
 <br>
 1.
-![screenshot-20241113-000309](https://github.com/user-attachments/assets/714786e8-b0d4-42c6-a772-dc541c88eb5e)
+![screenshot-20241113-000309](https://github.com/user-attachments/assets/e81b2b44-078c-45a1-b87c-ed2778ddb64b)
+<br>
 2.
-![screenshot-20241113-000336](https://github.com/user-attachments/assets/3a6c6d04-1194-49b7-8762-304d9f5a146a)
+![screenshot-20241113-000336](https://github.com/user-attachments/assets/d503d12b-7085-400b-a9b1-4d55894fce4e)
 
+<br>
 > [!NOTE]
 > This theme uses [NerdFonts](https://www.nerdfonts.com/font-downloads) by default. I highly recommend that you install and set it as a terminal font.
 
