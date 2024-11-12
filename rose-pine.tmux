@@ -193,12 +193,10 @@ main() {
     local show_session
     readonly show_session="#[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_overlay] $current_session_icon #[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_overlay]#S$spacer#[fg=$thm_overlay, bg=default] "
 
-    # section_separators = { left = '', right = '' },
     local show_directory
     readonly show_directory="#[fg=$thm_overlay, bg=default]#[fg=$thm_subtle, bg=$thm_overlay]$spacer$current_folder_icon #[fg=$thm_foam]#{b:pane_current_path} "
 
     local show_directory_in_window_status
-    # BUG: It doesn't let the user pass through a custom window name
     show_directory_in_window_status="#I$left_separator#[fg=$thm_gold,bg=""]#{b:pane_current_path}"
 
     local show_directory_in_window_status_current
