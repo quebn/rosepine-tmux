@@ -191,7 +191,7 @@ main() {
     show_window_in_window_status_current="#I#[fg=$thm_gold,bg=""]$left_separator#[fg=$thm_gold,bg=""]#W"
 
     local show_session
-    readonly show_session="#[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_surface] $current_session_icon #[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_surface]#S$spacer#[fg=$thm_surface, bg=default] "
+    readonly show_session="#[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_overlay] $current_session_icon #[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_overlay]#S$spacer#[fg=$thm_overlay, bg=default] "
 
     # section_separators = { left = '', right = '' },
     local show_directory
