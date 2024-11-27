@@ -245,7 +245,7 @@ main() {
 
     # tmux integrated modes
     # setw clock-mode-colour "${thm_love}"
-    setw mode-style "bg=$thm_hl_low,fg=$thm_rose"
+    setw mode-style "bg=$thm_hl_low,fg=$thm_gold"
 
     # Call everything to action
     tmux "${tmux_commands[@]}"
