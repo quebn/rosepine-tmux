@@ -199,7 +199,7 @@ main() {
     readonly show_session="#[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_overlay] $current_session_icon #[fg=#{?client_prefix,$thm_love,$thm_rose},bg=$thm_overlay]#S$spacer#[fg=#{?client_prefix,$thm_love,$thm_rose}, bg=default]$left_separator "
 
     local show_directory
-    readonly show_directory="#[bg=default, fg=$thm_foam]$right_separator#[fg=$thm_subtle, bg=$thm_overlay]$spacer$current_folder_icon #[fg=$thm_foam]#{b:pane_current_path} "
+    readonly show_directory="#[bg=default, fg=$thm_foam]$right_separator#[fg=$thm_foam, bg=$thm_overlay]$spacer$current_folder_icon #{b:pane_current_path} "
 
     local show_directory_in_window_status
     show_directory_in_window_status="#I$left_separator#[fg=$thm_gold,bg=""]#{b:pane_current_path}"
