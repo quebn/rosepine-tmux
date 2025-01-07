@@ -158,7 +158,7 @@ main() {
     readonly current_session_icon
 
     local current_folder_icon
-    current_folder_icon="$(get_tmux_option "@rose_pine_folder_icon" "")"
+    current_folder_icon="$(get_tmux_option "@rose_pine_folder_icon" "󱉭")"
     readonly current_folder_icon
 
     # Changes the icon / character that goes between each window's name in the bar
