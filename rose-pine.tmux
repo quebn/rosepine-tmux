@@ -214,7 +214,7 @@ main() {
     # TODO: cleanup this thing.
     set status-style "fg=$thm_pine,bg=default"
     show_window_in_window_status="#[fg=$thm_subtle,bg=default,bold]- #I#[fg=$thm_subtle,bg=default]:#[fg=$thm_subtle,bg=default]#W"
-    show_window_in_window_status_current="#[fg=$thm_pine,bg=default, bold] #I#[fg=$thm_pine,bg=default]:#[fg=$thm_pine,bg=default]#W"
+    show_window_in_window_status_current="#[fg=$thm_pine,bg=default, bold]● #I#[fg=$thm_pine,bg=default]:#[fg=$thm_pine,bg=default]#W"
     show_directory_in_window_status="#[fg=$thm_subtle,bg=default]#I#[fg=$thm_subtle,bg=default]$left_separator#[fg=$thm_subtle,bg=default]#{b:pane_current_path}"
     show_directory_in_window_status_current="#[fg=$thm_pine,bg=default]#I#[fg=$thm_pine,bg=default]:#[fg=$thm_pine,bg=default]#{b:pane_current_path}"
     set window-status-style "fg=$thm_subtle,bg=default"
